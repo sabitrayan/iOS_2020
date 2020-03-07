@@ -93,34 +93,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfI-hK-u0l">
-                                <rect key="frame" x="211" y="313" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="red"/>
-                                <connections>
-                                    <action selector="colorSelected:" destination="0fv-UA-Y4O" eventType="touchUpInside" id="Ilf-b6-2hp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-X0-LsO">
-                                <rect key="frame" x="211" y="412" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="blue"/>
-                                <connections>
-                                    <action selector="colorSelected:" destination="0fv-UA-Y4O" eventType="touchUpInside" id="r9i-C5-HGO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msF-js-nfY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msF-js-nfY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="413"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Red"/>
                                 <connections>
                                     <action selector="colorSelected:" destination="0fv-UA-Y4O" eventType="touchUpInside" id="lhC-PJ-qLe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfH-sK-ccm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfH-sK-ccm">
                                 <rect key="frame" x="0.0" y="438" width="414" height="413"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="BLue"/>
                                 <connections>
@@ -129,6 +111,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="width" secondItem="UmM-bw-YDJ" secondAttribute="width" id="LK6-92-OZf"/>
+                            <constraint firstItem="msF-js-nfY" firstAttribute="centerX" secondItem="hhE-wn-WFK" secondAttribute="centerX" id="P3r-I4-Tpc"/>
+                            <constraint firstItem="hhE-wn-WFK" firstAttribute="trailing" secondItem="msF-js-nfY" secondAttribute="trailing" id="SpX-TR-z8h"/>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="centerX" secondItem="msF-js-nfY" secondAttribute="centerX" id="Xie-2L-KMM"/>
+                            <constraint firstItem="msF-js-nfY" firstAttribute="height" secondItem="UmM-bw-YDJ" secondAttribute="height" multiplier="0.460938" id="eX3-gw-oXW"/>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="width" secondItem="msF-js-nfY" secondAttribute="width" id="goH-wm-TOj"/>
+                            <constraint firstItem="hhE-wn-WFK" firstAttribute="bottom" secondItem="AfH-sK-ccm" secondAttribute="bottom" constant="11" id="hjQ-S5-p20"/>
+                            <constraint firstItem="msF-js-nfY" firstAttribute="leading" secondItem="hhE-wn-WFK" secondAttribute="leading" id="jso-or-w3j"/>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="height" secondItem="UmM-bw-YDJ" secondAttribute="height" multiplier="0.460938" id="kN8-TW-adv"/>
+                            <constraint firstItem="msF-js-nfY" firstAttribute="top" secondItem="hhE-wn-WFK" secondAttribute="top" id="lkC-to-NBx"/>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="leading" secondItem="hhE-wn-WFK" secondAttribute="leading" id="qoG-DU-aeH"/>
+                            <constraint firstItem="hhE-wn-WFK" firstAttribute="trailing" secondItem="AfH-sK-ccm" secondAttribute="trailing" id="tgd-w2-OIy"/>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="height" secondItem="msF-js-nfY" secondAttribute="height" id="uK0-G9-Him"/>
+                            <constraint firstItem="msF-js-nfY" firstAttribute="width" secondItem="UmM-bw-YDJ" secondAttribute="width" id="v6F-Cp-rtY"/>
+                            <constraint firstItem="AfH-sK-ccm" firstAttribute="top" secondItem="msF-js-nfY" secondAttribute="bottom" constant="-19" id="vAb-ge-7wM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hhE-wn-WFK"/>
                     </view>
                 </viewController>
