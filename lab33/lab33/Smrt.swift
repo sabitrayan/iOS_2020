@@ -14,15 +14,12 @@ class Smrt: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         XY()
-        navigation_BarItems()
     }
    
     var color: UIColor?
     var SB: UIView?
     
-    
     func XY(){
-        
         guard let figure = SB else {return}
         print(figure.frame.width)
         self.width.text = figure.frame.width.description
@@ -60,7 +57,7 @@ class Smrt: UIViewController {
                 let double_y = Double(y_text)
         else {
             let alert = UIAlertController(title: "Sorry Bratan", message: "Zapolni vse",  preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Krasavchig BRO", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Click Me BRO", style: .default, handler: nil))
             self.present(alert, animated: true)
             return
         }
@@ -71,7 +68,7 @@ class Smrt: UIViewController {
         
         if CGFloat(double_width) > screenWidth || CGFloat(double_height) > screenHeight || CGFloat(double_x) > screenWidth || CGFloat(double_y) > screenHeight {
             let alert = UIAlertController(title: "Sorry Bratan", message: "Уменьши данные", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Krasavchig BRO", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Click Me BRO", style: .default, handler: nil))
             self.present(alert, animated: true)
             return
         }
@@ -89,18 +86,6 @@ class Smrt: UIViewController {
         SB?.frame = CGRect(x: CGFloat(double_x), y: CGFloat(double_y), width: CGFloat(double_width), height: CGFloat(double_height))
         
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func navigation_BarItems() {
-        let deleteButton = UIBarButtonItem(title: "delete", style: .plain, target: self, action: #selector(Delete_Button))
-        
-        let addButton = UIBarButtonItem(title: "save", style: .plain, target: self, action: #selector(SaveButton(_:)))
-
-        guard SB != nil else {
-            navigationItem.rightBarButtonItems = [ addButton]
-            return
-        }
-        navigationItem.rightBarButtonItems = [deleteButton, addButton]
     }
     
     @IBAction func Delete_Button(_ sender: UIButton) {

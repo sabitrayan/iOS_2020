@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.figureDidTap))
             figure.addGestureRecognizer(tapGestureRecognizer)
             
-            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.figureDidPan(recognizer_for_xren:)))
+            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.figureDidPan(recognizer:)))
             figure.addGestureRecognizer(panGestureRecognizer)
             
             let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(self.figureDidPinch))
@@ -47,13 +47,15 @@ class ViewController: UIViewController {
     
     
     var baseOrigin: CGPoint!
-    @objc func figureDidPan(recognizer_for_xren: UIPanGestureRecognizer) {
-        let new_view = recognizer_for_xren.view!
-        let translation = recognizer_for_xren.translation(in: view)
-        switch recognizer_for_xren.state {
+    @objc func figureDidPan(recognizer: UIPanGestureRecognizer) {
+        let new_view = recognizer.view!
+        let translation = recognizer.translation(in: view)
+        switch recognizer.state {
         case .changed:
-            new_view.center = CGPoint(x: new_view.center.x + translation.x, y: new_view.center.y + translation.y)
-            recognizer_for_xren.setTranslation(CGPoint.zero, in: view)
+            new_view.center = CGPoint(
+                x: new_view.center.x + translation.x,
+                y: new_view.center.y + translation.y)
+                recognizer.setTranslation(CGPoint.zero, in: view)
         default:
             break
         }
